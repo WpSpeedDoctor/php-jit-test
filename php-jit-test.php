@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
 if( !is_admin() ) return;
 
-if( $pagenow === 'site-health.php' && ( $_GET['tab'] ?? false ) ==='' ) {
+if( $pagenow === 'site-health.php' && empty( $_GET['tab'] ) ) {
 	
 	function add_jit_test_tab( $tests ) {
 		$tests['async']['jit_enabled_test'] = array(
